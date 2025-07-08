@@ -48,4 +48,30 @@ public class Array {
             System.out.println(arr[i]);
         }
     }
+
+    public int getAt (int index) {
+        return arr[index];
+    }
+
+    public Array intersect (Array other) {
+        Array smaller = this.count <= other.count ? this : other;
+        Array larger = this.count > other.count ? this : other;
+
+        if (other.count == 0) {
+            return new Array(0);
+        }
+
+        int minLength = Math.min(this.count, other.count);
+
+        Array result = new Array(minLength);
+
+        for (int i = 0; i < minLength; i++) {
+            int item = smaller.getAt(i);
+            if (larger.indexOf(item) > -1 && result.indexOf(item) == -1) {
+                result.insert(item);
+            }
+        }
+
+        return result;
+    }
 }

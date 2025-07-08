@@ -31,5 +31,15 @@ public class Main {
         System.out.println(arr.indexOf(54));
         System.out.println(arr.indexOf(99));
         System.out.println(arr.indexOf(100));
+
+        // Intersect
+        System.out.println("--Intersect--");
+        Array arr2 = new Array(3);
+        arr2.insert(5);
+        arr2.insert(5);
+        arr2.insert(444);
+        arr2.insert(12);
+
+        arr.intersect(arr2).printItems();
     }
 }
