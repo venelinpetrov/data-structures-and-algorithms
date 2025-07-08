@@ -68,8 +68,8 @@ int binarySearch(int[] arr, int target) {
     while (left <= right) {
         int mid = (left + right) / 2;
         if (arr[mid] == target) {
-            return mid
-        };
+            return mid;
+        }
         else if (arr[mid] < target) {
             left = mid + 1;
         }
@@ -88,3 +88,22 @@ int binarySearch(int[] arr, int target) {
 - Super efficient for large datasets (when applicable)
 - Very fast
 - Applicable for sorted or structured input
+
+## `O(n log n)`, or linearithmic time complexity
+
+`O(n log n)` means the algorithm does logarithmic work (`log n`) for each of the `n` elements
+
+```java
+// Most efficient sorting algorithms like Merge Sort and Heap Sort run in O(n log n)
+
+void mergeSort(int[] arr) {
+    // recursively splits the array in half (log n)
+    // and merges n elements back together at each level
+}
+```
+
+**Key Idea:**
+
+- The problem is divided recursively `(log n)`
+- All elements are touched (`n`) during processing and merging
+- More complex than `O(n)`, but much faster than `O(n^2)`
