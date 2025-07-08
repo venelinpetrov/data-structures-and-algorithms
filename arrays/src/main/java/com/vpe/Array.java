@@ -3,6 +3,7 @@ package com.vpe;
 public class Array {
     private int[] items;
     private int count;
+
     public Array(int size) {
         items = new int[size];
     }
@@ -49,7 +50,7 @@ public class Array {
         }
     }
 
-    public int getAt (int index) {
+    public int getAt(int index) {
         return items[index];
     }
 
@@ -95,5 +96,28 @@ public class Array {
             }
         }
         return maxValue;
+    }
+
+    public void insertAt(int item, int index) {
+        // [1, 2, 3, 4]
+        //     ^(1, 8)
+        // [1, 8, 2, 3, 4]
+        if (index < 0 || index >= count) {
+            throw new IllegalArgumentException();
+        }
+
+        if (count == items.length) {
+            int[] copy = new int[count * 2];
+            for (int i = 0; i < count; i++) {
+                copy[i] = items[i];
+            }
+            items = copy;
+        }
+        //
+        for (int i = count - 1; i >= index ; i--) {
+            items[i + i] = items[i];
+        }
+        items[index] = item;
+        count++;
     }
 }

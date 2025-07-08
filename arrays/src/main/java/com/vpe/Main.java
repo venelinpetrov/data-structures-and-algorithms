@@ -49,5 +49,16 @@ public class Main {
         arr3.insert(3);
         arr3.reverse();
         arr3.printItems();
+
+        System.out.println("--Insert at--");
+        Array arr4 = new Array(4);
+        arr4.insert(1);
+        arr4.insert(2);
+        arr4.insert(3);
+        arr4.insert(4);
+
+        arr4.insertAt(77, 1);
+
+        arr4.printItems();
     }
 }
