@@ -107,3 +107,22 @@ void mergeSort(int[] arr) {
 - The problem is divided recursively `(log n)`
 - All elements are touched (`n`) during processing and merging
 - More complex than `O(n)`, but much faster than `O(n^2)`
+
+## `O(n x m)` or product time complexity
+
+Reflects how the total number of operations depends on both input sizes.
+
+```java
+void printAllPairs(int[] a, int[] b) {
+    for (int i = 0; i < a.length; i++) {       // Runs n times
+        for (int j = 0; j < b.length; j++) {   // Runs m times
+            System.out.println(a[i] + ", " + b[j]);
+        }
+    }
+}
+```
+
+**Key Notes:**
+
+- If `n == m`, then `O(n × m)` becomes `O(n^2)`
+- If n and m are different inputs we should not simplify it to `O(n^2)`
