@@ -1,21 +1,21 @@
 package com.vpe;
 
 public class Array {
-    private int[] arr;
+    private int[] items;
     private int count;
     public Array(int size) {
-        arr = new int[size];
+        items = new int[size];
     }
 
     public void insert(int item) {
-        if (arr.length == count) {
+        if (items.length == count) {
             int[] copy = new int[count * 2];
             for (int i = 0; i < count; i++) {
-                copy[i] = arr[i];
+                copy[i] = items[i];
             }
-            arr = copy;
+            items = copy;
         }
-        arr[count++] = item;
+        items[count++] = item;
     }
 
     public void delete(int index) {
@@ -24,7 +24,7 @@ public class Array {
         }
 
         for (int i = index; i < count; i++) {
-            arr[i] = arr[i + 1];
+            items[i] = items[i + 1];
         }
 
         count--;
@@ -34,7 +34,7 @@ public class Array {
         int index = -1;
 
         for (int i = 0; i < count; i++) {
-            if (arr[i] == item) {
+            if (items[i] == item) {
                 index = i;
                 return i;
             }
@@ -45,15 +45,15 @@ public class Array {
 
     public void printItems() {
         for (int i = 0; i < count; i++) {
-            System.out.println(arr[i]);
+            System.out.println(items[i]);
         }
     }
 
     public int getAt (int index) {
-        return arr[index];
+        return items[index];
     }
 
-    public Array intersect (Array other) {
+    public Array intersect(Array other) {
         Array smaller = this.count <= other.count ? this : other;
         Array larger = this.count > other.count ? this : other;
 
@@ -73,5 +73,27 @@ public class Array {
         }
 
         return result;
+    }
+
+    public void reverse() {
+        for (int i = 0; i < count / 2; i++) {
+            int tmp = items[i];
+            items[i] = items[count - 1 - i];
+            items[count - 1 - i] = tmp;
+        }
+    }
+
+    public int max() throws IllegalStateException {
+        if (this.count == 0) {
+            throw new IllegalStateException("Array is empty");
+        }
+
+        int maxValue = items[0];
+        for (int i = 1; i < count; i++) {
+            if (items[i] > maxValue) {
+                maxValue = items[i];
+            }
+        }
+        return maxValue;
     }
 }

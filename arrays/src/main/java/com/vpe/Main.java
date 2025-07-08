@@ -41,5 +41,13 @@ public class Main {
         arr2.insert(12);
 
         arr.intersect(arr2).printItems();
+
+        System.out.println("--Reverse--");
+        Array arr3 = new Array(3);
+        arr3.insert(1);
+        arr3.insert(2);
+        arr3.insert(3);
+        arr3.reverse();
+        arr3.printItems();
     }
 }
