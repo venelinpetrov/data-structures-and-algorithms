@@ -22,7 +22,6 @@ public class LinkedList {
         }
     }
 
-    // addFirst
     public void addFirst(int value) {
         var node = new Node(value);
 
@@ -36,7 +35,6 @@ public class LinkedList {
         size++;
     }
 
-    // addLast
     public void addLast(int value) {
         var node = new Node(value);
 
@@ -50,7 +48,6 @@ public class LinkedList {
         size++;
     }
 
-    // deleteFirst
     public void deleteFirst() {
         if (isEmpty()) {
             return;
@@ -59,18 +56,18 @@ public class LinkedList {
         if (first == last) {
             first = last = null;
         } else {
-            first = first.next;
+            var second = first.next;
+            first.next = null;
+            first = second;
 
         }
         size--;
     }
 
-    // deleteLast
     public void deleteLast() {
         if (isEmpty()) {
             return;
         }
-        // a->b->c
         if (first == last) {
             first = last = null;
         } else {
@@ -78,18 +75,16 @@ public class LinkedList {
             while (current.next != last) {
                 current = current.next;
             }
-            last = current;
             last.next = null;
+            last = current;
         }
         size--;
     }
 
-    // contains
     public boolean contains(int value) {
         return indexOf(value) != -1;
     }
 
-    // indexOf
     public int indexOf(int value) {
         var current = first;
         var index = 0;
@@ -104,7 +99,6 @@ public class LinkedList {
         return -1;
     }
 
-    // toString
     @Override
     public String toString() {
         Node current = first;
@@ -125,7 +119,6 @@ public class LinkedList {
     public Node getLast() {
         return last;
     }
-
 
     public int getSize() {
         return size;
