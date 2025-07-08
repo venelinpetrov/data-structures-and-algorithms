@@ -1,0 +1,36 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Compiled class files
+*.class
+
+# Maven / Gradle logs and build output
+/logs/
+*.log
+target/
+build/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*.DS_Store
+
+# Generated files
+out/
+
+# OS-specific files
+Thumbs.db
+.DS_Store
+
+# Eclipse (if opened there)
+.project
+.classpath
+.c9/
+.settings/
+
+# VS Code (in case you open it there too)
+.vscode/
