@@ -86,14 +86,7 @@ public class LinkedList {
 
     // contains
     public boolean contains(int value) {
-        var current = first;
-        while(current != null) {
-            if (current.value == value) {
-                return true;
-            }
-            current = current.next;
-        }
-        return false;
+        return indexOf(value) != -1;
     }
 
     // indexOf
