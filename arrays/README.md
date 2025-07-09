@@ -36,7 +36,7 @@ This project contains a custom implementation of a **dynamic array** in Java. It
 
 ---
 
-## 🛠️ Example Usage
+## Example Usage
 
 ```java
 Array array = new Array(3);
