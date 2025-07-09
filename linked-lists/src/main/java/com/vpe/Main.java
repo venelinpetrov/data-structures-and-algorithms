@@ -29,5 +29,18 @@ public class Main {
         System.out.println(linkedList.indexOf(33));
         System.out.println(linkedList.indexOf(12));
         System.out.println(linkedList.indexOf(0));
+
+        System.out.println("---Reverse---");
+        LinkedList linkedList2 = new LinkedList();
+
+        linkedList2.addLast(1);
+        linkedList2.addLast(2);
+        linkedList2.addLast(3);
+        linkedList2.addLast(4);
+        linkedList2.addLast(41);
+
+        System.out.println(linkedList2);
+        linkedList2.reverse();
+        System.out.println(linkedList2);
     }
 }

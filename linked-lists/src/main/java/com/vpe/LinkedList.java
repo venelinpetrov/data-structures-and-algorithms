@@ -133,4 +133,47 @@ public class LinkedList {
         }
         return array;
     }
+
+    public void reverse() {
+        // 10 -> 20 -> 30 -> 40
+        // p     c     n
+        // ---
+        // 10 <- 20 <- 30 <- 40
+        //                    p     c     n (we stop here)
+        if (isEmpty()) {
+            return;
+        }
+
+        Node prev = first;
+        var cur = first.next;
+
+        while(cur != null) {
+            var next = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = next;
+        }
+
+        last = first;
+        last.next = null;
+        first = prev;
+    }
+
+    public Node getPrev(Node node) {
+        if (isEmpty()) {
+            return null;
+        }
+
+        if (first == last) {
+            return null;
+        }
+
+        var current = first;
+
+        while (current.next != node) {
+            current = current.next;
+        }
+
+        return current;
+    }
 }

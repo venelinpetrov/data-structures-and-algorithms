@@ -27,6 +27,7 @@ The list itself maintains:
 | `indexOf(int)`   | Returns the index of a given value     | `O(n)`          |
 | `size()`         | Returns the size of the linked list    | `O(1)`          |
 | `toArray()`      | Converts the linked list to an array   | `O(n)`          |
+| `reverse()`      | In-place reverse the linked list       | `O(n)`          |
 
 ## Notes on Complexity
 
