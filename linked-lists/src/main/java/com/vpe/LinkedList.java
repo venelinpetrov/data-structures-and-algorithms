@@ -3,6 +3,7 @@ package com.vpe;
 public class LinkedList {
     private Node first;
     private Node last;
+    private int size;
 
     private static class Node {
         private final int value;
@@ -30,6 +31,7 @@ public class LinkedList {
             node.next = first;
             first = node;
         }
+        size++;
     }
 
     public void addLast(int value) {
@@ -41,7 +43,7 @@ public class LinkedList {
             last.next = node;
             last = node;
         }
-
+        size++;
     }
 
     public void deleteFirst() {
@@ -56,12 +58,14 @@ public class LinkedList {
             first.next = null;
             first = second;
         }
+        size--;
     }
 
     public void deleteLast() {
         if (isEmpty()) {
             return;
         }
+
         if (first == last) {
             first = last = null;
         } else {
@@ -72,6 +76,8 @@ public class LinkedList {
             last.next = null;
             last = current;
         }
+
+        size--;
     }
 
     public boolean contains(int value) {
@@ -111,5 +117,20 @@ public class LinkedList {
 
     public Node getLast() {
         return last;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public int[] toArray() {
+        int[] array = new int[size];
+        var current = first;
+        var index = 0;
+        while(current != null) {
+            array[index++] = current.value;
+            current = current.next;
+        }
+        return array;
     }
 }

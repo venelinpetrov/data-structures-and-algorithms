@@ -13,6 +13,7 @@ The list itself maintains:
 
 - `first`: reference to the first node
 - `last`: reference to the last node
+- `size`: keeps track of the linked list size
 
 ## Supported Operations
 
@@ -24,6 +25,8 @@ The list itself maintains:
 | `deleteLast()`   | Removes the last element               | `O(n)`          |
 | `contains(int)`  | Checks if a value exists in the list   | `O(n)`          |
 | `indexOf(int)`   | Returns the index of a given value     | `O(n)`          |
+| `size()`         | Returns the size of the linked list    | `O(1)`          |
+| `toArray()`      | Converts the linked list to an array   | `O(n)`          |
 
 ## Notes on Complexity
 
