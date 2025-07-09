@@ -4,8 +4,10 @@ Personal repository for learning and practicing Data Structures and Algorithms.
 
 ## What's Included
 
-- Core data structures
-- Fundamental algorithms
+- [Big-O notation](big-o-notation/)
+- [Arrays](arrays/)
+- [Linked lists](linked-lists/)
+- [Binary tree](binary-tree/)
 
 ## Purpose
 
