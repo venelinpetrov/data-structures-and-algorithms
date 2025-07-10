@@ -3,8 +3,11 @@ package com.vpe;
 import java.util.Stack;
 
 public class BalancedExpression {
+    private static Stack<Character> stack;
+
     public static boolean isBalanced(String str) {
         Stack<Character> stack = new Stack<>();
+
         for(Character c : str.toCharArray()) {
             if (isOpeningBracket(c)) {
                 stack.push(c);
