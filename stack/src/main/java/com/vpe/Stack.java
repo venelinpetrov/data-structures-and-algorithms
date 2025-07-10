@@ -6,7 +6,6 @@ import java.util.NoSuchElementException;
 public class Stack<T> {
     private final LinkedList<T> items = new LinkedList<>();
 
-
     public void push(T el) {
         items.addLast(el);
     }
