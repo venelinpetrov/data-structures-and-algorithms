@@ -54,5 +54,18 @@ public class Main {
         System.out.println(linkedList3.getKthNodeFromTheEnd(1));
         System.out.println(linkedList3.getKthNodeFromTheEnd(2));
         System.out.println(linkedList3.getKthNodeFromTheEnd(0));
+
+        System.out.println("---Print middle---");
+
+        LinkedList linkedList4 = new LinkedList();
+        linkedList4.addLast(1);
+        linkedList4.addLast(2);
+        linkedList4.addLast(3);
+        linkedList4.addLast(4);
+        linkedList4.addLast(5);
+        linkedList4.addLast(6);
+        linkedList4.addLast(7);
+//        linkedList4.addLast(8);
+        linkedList4.printMiddle();
     }
 }

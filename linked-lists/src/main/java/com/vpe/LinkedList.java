@@ -184,4 +184,41 @@ public class LinkedList {
 
         return a.value;
     }
+
+    public void printMiddle() {
+        // 1 -> 2 -> 3 -> 4
+        // print 2 and 3
+        // 1 -> 2 -> 3 -> 4 -> 5
+        // print 3
+        // 0
+        // return
+        // 1
+        // print 1
+        // 1 -> 2
+        // print 1 and 2
+
+        // for odd n number of nodes
+        // n | middle                   n | middle
+        // 1 | 1                        2 | 1 2
+        // 3 | 2                        4 | 2 3
+        // 5 | 3                        6 | 3 4
+        // 7 | 4                        8 | 4 5
+        // 9 | 5
+
+        var cur = first;
+        var mid = first;
+        var count = 1;
+        while (cur.next != null) {
+            cur = cur.next;
+            if (count % 2 == 0) {
+                mid = mid.next;
+            }
+            count++;
+        }
+
+        System.out.println(mid.value);
+        if (count % 2 == 0) {
+            System.out.println(mid.next.value);
+        }
+    }
 }

@@ -28,6 +28,7 @@ The list itself maintains:
 | `size()`                    | Returns the size of the linked list    | `O(1)`          |
 | `toArray()`                 | Converts the linked list to an array   | `O(n)`          |
 | `reverse()`                 | In-place reverse the linked list       | `O(n)`          |
+| `printMiddle()`             | Prints the middle node(s)              | `O(n)`          |
 | `getKthNodeFromTheEnd(int)` | Get k-th element from the end          | `O(n)`          |
 
 ## Notes on Complexity
