@@ -8,6 +8,7 @@ Personal repository for learning and practicing Data Structures and Algorithms.
 - [Arrays](arrays/)
 - [Linked lists](linked-lists/)
 - [Binary tree](binary-tree/)
+- [Stack](stack/)
 
 ## Purpose
 
