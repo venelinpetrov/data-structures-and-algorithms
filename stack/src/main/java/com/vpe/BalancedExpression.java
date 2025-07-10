@@ -9,7 +9,10 @@ public class BalancedExpression {
             if (isOpeningBracket(c)) {
                 stack.push(c);
             }
-            if (isClosingBracket(c)) {
+            if (isClosingBracket(c) ) {
+                if (stack.empty()) {
+                    return false;
+                }
                 var openingBracket = stack.pop();
                 if (openingBracket != getOpeningBracket(c)) {
                     return false;
