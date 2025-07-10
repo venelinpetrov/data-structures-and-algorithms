@@ -17,17 +17,18 @@ The list itself maintains:
 
 ## Supported Operations
 
-| Method           | Description                            | Time Complexity |
-|------------------|----------------------------------------|-----------------|
-| `addFirst(int)`  | Inserts a value at the beginning       | `O(1)`          |
-| `addLast(int)`   | Inserts a value at the end             | `O(1)`          |
-| `deleteFirst()`  | Removes the first element              | `O(1)`          |
-| `deleteLast()`   | Removes the last element               | `O(n)`          |
-| `contains(int)`  | Checks if a value exists in the list   | `O(n)`          |
-| `indexOf(int)`   | Returns the index of a given value     | `O(n)`          |
-| `size()`         | Returns the size of the linked list    | `O(1)`          |
-| `toArray()`      | Converts the linked list to an array   | `O(n)`          |
-| `reverse()`      | In-place reverse the linked list       | `O(n)`          |
+| Method                      | Description                            | Time Complexity |
+|-----------------------------|----------------------------------------|-----------------|
+| `addFirst(int)`             | Inserts a value at the beginning       | `O(1)`          |
+| `addLast(int)`              | Inserts a value at the end             | `O(1)`          |
+| `deleteFirst()`             | Removes the first element              | `O(1)`          |
+| `deleteLast()`              | Removes the last element               | `O(n)`          |
+| `contains(int)`             | Checks if a value exists in the list   | `O(n)`          |
+| `indexOf(int)`              | Returns the index of a given value     | `O(n)`          |
+| `size()`                    | Returns the size of the linked list    | `O(1)`          |
+| `toArray()`                 | Converts the linked list to an array   | `O(n)`          |
+| `reverse()`                 | In-place reverse the linked list       | `O(n)`          |
+| `getKthNodeFromTheEnd(int)` | Get k-th element from the end          | `O(n)`          |
 
 ## Notes on Complexity
 

@@ -42,5 +42,17 @@ public class Main {
         System.out.println(linkedList2);
         linkedList2.reverse();
         System.out.println(linkedList2);
+
+        System.out.println("---Kth node from the end---");
+
+        LinkedList linkedList3 = new LinkedList();
+        linkedList3.addLast(1);
+        linkedList3.addLast(2);
+        linkedList3.addLast(3);
+        linkedList3.addLast(4);
+
+        System.out.println(linkedList3.getKthNodeFromTheEnd(1));
+        System.out.println(linkedList3.getKthNodeFromTheEnd(2));
+        System.out.println(linkedList3.getKthNodeFromTheEnd(0));
     }
 }

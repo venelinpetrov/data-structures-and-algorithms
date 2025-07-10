@@ -159,21 +159,29 @@ public class LinkedList {
         first = prev;
     }
 
-    public Node getPrev(Node node) {
+    public int getKthNodeFromTheEnd(int k) {
+        // 1 -> 2 -> 3 -> 4
+        //      *a       *b
+        //           ^..k nodes apart
         if (isEmpty()) {
-            return null;
+            throw new IllegalStateException();
         }
 
-        if (first == last) {
-            return null;
+        var a = first;
+        var b = first;
+
+        for (int i = 0; i < k; i++) {
+            b = b.next;
+            if (b == null) {
+                throw new IllegalArgumentException();
+            }
         }
 
-        var current = first;
-
-        while (current.next != node) {
-            current = current.next;
+        while (b != last) {
+            a = a.next;
+            b = b.next;
         }
 
-        return current;
+        return a.value;
     }
 }
