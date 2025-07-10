@@ -7,8 +7,8 @@ Personal repository for learning and practicing Data Structures and Algorithms.
 - [Big-O notation](big-o-notation/)
 - [Arrays](arrays/)
 - [Linked lists](linked-lists/)
-- [Binary tree](binary-tree/)
 - [Stack](stack/)
+- [Binary tree](binary-tree/)
 
 ## Purpose
 
@@ -25,3 +25,13 @@ Java
 ## Structure
 
 Each folder in this repository focuses on a specific topic, e.g **binary-tree**.
+
+## Acknowledgements
+
+These notes are based on [The Ultimate Data Structures & Algorithms Bundle](https://codewithmosh.com/p/data-structures-algorithms) by Mosh Hamedani. If you're interested in learning data structures and algorithms, I highly recommend checking out the course.
+
+Please note: this repository is not intended as a standalone learning resource, but rather as a quick reference for key concepts.
+
+## Disclaimer
+
+Not all solutions are perfect as this is my own take on the exercises!
