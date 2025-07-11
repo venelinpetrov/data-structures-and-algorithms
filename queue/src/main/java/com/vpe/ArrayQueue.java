@@ -5,8 +5,8 @@ import java.util.NoSuchElementException;
 public class ArrayQueue {
     // 10 20 30 40
     // [10 20 0 0 0]
-    //  ^a  ^b
-    //      ^ab
+    //  ^f  ^b
+    //      ^fb
     private final int[] items;
     private int front = 0;
     private int back = 0;

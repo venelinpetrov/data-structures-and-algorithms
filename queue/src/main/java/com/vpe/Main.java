@@ -36,6 +36,13 @@ public class Main {
         System.out.println(q2);
         q2.enqueue(10);
         System.out.println(q2);
+
+        System.out.println("---Priority queue---");
+        var pq = new PriorityQueue(5);
+        pq.add(4);
+        pq.add(2);
+        pq.add(5);
+        System.out.println(pq);
     }
 
     public static void reverse(Queue<Integer> queue) {
