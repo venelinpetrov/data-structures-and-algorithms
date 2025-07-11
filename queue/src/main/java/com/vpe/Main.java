@@ -1,3 +1,4 @@
+package com.vpe;
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.Stack;
@@ -14,6 +15,27 @@ public class Main {
         reverse(q);
         System.out.println(q);
 
+        var q2 = new ArrayQueue(4);
+        q2.enqueue(10);
+        q2.enqueue(20);
+        q2.enqueue(30);
+        System.out.println(q2);
+        System.out.println(q2.dequeue());
+        System.out.println(q2);
+        q2.enqueue(40);
+        System.out.println(q2);
+        q2.enqueue(50);
+        System.out.println(q2);
+        q2.dequeue();
+        System.out.println(q2);
+        q2.dequeue();
+        System.out.println(q2);
+        q2.dequeue();
+        System.out.println(q2);
+        q2.dequeue();
+        System.out.println(q2);
+        q2.enqueue(10);
+        System.out.println(q2);
     }
 
     public static void reverse(Queue<Integer> queue) {
