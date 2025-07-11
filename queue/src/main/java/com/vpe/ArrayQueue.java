@@ -37,11 +37,14 @@ public class ArrayQueue {
     }
 
     public int peek() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty");
+        }
         return items[front];
     }
 
     public boolean isEmpty() {
-        return back == 0;
+        return count == 0;
     }
 
     public boolean isFull() {

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class PriorityQueue {
     private final int[] items;
-    int count = 0;
+    private int count = 0;
 
     public PriorityQueue(int capacity) {
         items = new int[capacity];
@@ -30,7 +30,7 @@ public class PriorityQueue {
     }
 
     public int remove() {
-        if (!isEmpty()) {
+        if (isEmpty()) {
             throw new IllegalStateException();
         }
         return items[--count];
