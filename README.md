@@ -9,6 +9,7 @@ Personal repository for learning and practicing Data Structures and Algorithms.
 - [Linked lists](linked-lists/)
 - [Stack](stack/)
 - [Queue](queue/)
+- [Hash table](hash-table)
 - [Binary tree](binary-tree/)
 
 ## Purpose
