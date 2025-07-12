@@ -53,5 +53,65 @@ public class Main {
         t.remove(2);
 
         System.out.println(t);
+        // ---------------------------
+        // Exercises
+
+
+        int[] arr = { 1, 2, 2, 3, 3, 3, 4 };
+        System.out.println(findMostRepeatedEl(arr));
+
+        int[] arr2 = {1, 7, 5, 9, 2, 12, 3};
+        System.out.println(countPairsWithDiffK(arr2, 2));
+    }
+
+    private static int findMostRepeatedEl(int[] arr) {
+        // 1. Find the most repeated element in an array of integers. What is the time
+        // complexity of this method?
+
+        // Input: [1, 2, 2, 3, 3, 3, 4]
+        // Output: 3
+        if (arr == null) {
+            throw new IllegalArgumentException();
+        }
+
+        if (arr.length == 0) {
+            throw new IllegalStateException();
+        }
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int num = arr[0];
+        int freq = 0;
+
+        for( var item : arr) {
+            int count = map.getOrDefault(item, 0) + 1;
+            map.put(item, count);
+
+            if (count > freq) {
+                freq = count;
+                num = item;
+            }
+        }
+
+        return num;
+    }
+
+
+    public static int countPairsWithDiffK(int[] arr, int k) {
+        // 2. Given an array of integers, count the number of unique pairs of integers that have difference k.
+        // Input: [1, 7, 5, 9, 2, 12, 3] K=2
+        // Output: 4
+
+        HashSet<Integer> set = new HashSet<>();
+        int count = 0;
+        for(var num : arr) {
+            set.add(num);
+        }
+        for(var num : set) {
+            if (set.contains(num + k)) {
+                count++;
+            }
+        }
+
+        return count;
     }
 }
