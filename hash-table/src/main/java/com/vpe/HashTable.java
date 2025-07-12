@@ -30,6 +30,7 @@ public class HashTable {
         }
     }
     private static final double LOAD_FACTOR = 0.75;
+
     private int size = 0;
     private LinkedList<Entry>[] items;
 
@@ -40,13 +41,16 @@ public class HashTable {
             items[index] = new LinkedList<>();
         }
 
-        for (var item : items[index]) {
+        LinkedList<Entry> bucket = items[index];
+
+        for (var item : bucket) {
             if (item.key == key) {
                 item.value = value;
                 return;
             }
         }
-        items[index].addLast(new Entry(key, value));
+
+        bucket.addLast(new Entry(key, value));
         size++;
 
         if ((double) size / items.length > LOAD_FACTOR) {
@@ -56,12 +60,13 @@ public class HashTable {
 
     public String get(int key) {
         var index = hash(key);
+        LinkedList<Entry> bucket = items[index];
 
-        if (items[index] == null) {
+        if (bucket == null) {
             return null;
         }
 
-        for (var item : items[index]) {
+        for (var item : bucket) {
             if(item.key == key) {
                 return item.value;
             }
@@ -72,12 +77,13 @@ public class HashTable {
 
     public void remove(int key) {
         var index = hash(key);
+        LinkedList<Entry> bucket = items[index];
 
-        if(items[index] == null) {
-            throw new IllegalStateException();
+        if(bucket == null) {
+            return;
         }
 
-        var iterator = items[index].iterator();
+        var iterator = bucket.iterator();
 
         while(iterator.hasNext()) {
             var item = iterator.next();
@@ -89,8 +95,12 @@ public class HashTable {
         }
     }
 
+    public int getSize() {
+        return size;
+    }
+
     private int hash(int key) {
-        return key % items.length;
+        return Math.abs(key) % items.length;
     }
 
     private void resize() {
