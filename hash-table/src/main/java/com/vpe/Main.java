@@ -1,8 +1,6 @@
 package com.vpe;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -62,6 +60,9 @@ public class Main {
 
         int[] arr2 = {1, 7, 5, 9, 2, 12, 3};
         System.out.println(countPairsWithDiffK(arr2, 2));
+
+        System.out.println("--- Two Sum ---");
+        System.out.println(Arrays.toString(twoSum(new int[]{2, 7, 11, 15}, 9)));
     }
 
     private static int findMostRepeatedEl(int[] arr) {
@@ -113,5 +114,29 @@ public class Main {
         }
 
         return count;
+    }
+
+    public static int[] twoSum(int[] arr, int k) {
+        // 3- Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+        //Input: [2, 7, 11, 15] - target = 9
+        // Output: [0, 1] (because 2 + 7 = 9)
+        // Assume that each input has exactly one solution, and you may not use the same element twice
+
+        // num, index
+        HashMap<Integer, Integer> map = new HashMap<>();
+        var res = new ArrayList<Integer>(2);
+        for (int i = 0; i < arr.length; i++) {
+
+            var item = arr[i];
+
+            if (map.containsKey(k - item)) {
+                var prevItem = map.get(k - item);
+                return new int[]{ prevItem, i };
+            }
+
+            map.put(item, i);
+
+        }
+        return null;
     }
 }
