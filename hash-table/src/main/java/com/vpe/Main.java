@@ -124,7 +124,6 @@ public class Main {
 
         // num, index
         HashMap<Integer, Integer> map = new HashMap<>();
-        var res = new ArrayList<Integer>(2);
         for (int i = 0; i < arr.length; i++) {
 
             var item = arr[i];
