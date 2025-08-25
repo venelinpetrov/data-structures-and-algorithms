@@ -27,7 +27,7 @@ public class Array {
             throw new IllegalArgumentException();
         }
 
-        for (int i = index; i < size; i++) {
+        for (int i = index; i < size - 1; i++) {
             items[i] = items[i + 1];
         }
 
